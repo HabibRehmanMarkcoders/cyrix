@@ -1,0 +1,12 @@
+
+services:
+  - type: web
+    name: isprojct
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: node server.js
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
